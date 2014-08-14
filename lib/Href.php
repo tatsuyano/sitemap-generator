@@ -77,7 +77,7 @@ class Href {
         foreach ($this->arr_href as $href => $status){
             if($status == SitemapGenerator::ALREADY_CRAWLED){
                 $content .= "<url>\n";
-                $content .= sprintf("<loc>%s</loc>\n",rawurlencode($href));
+                $content .= sprintf("<loc>%s</loc>\n",$href);
                 $content .= sprintf("<lastmod>%s</lastmod>\n",$today);
                 $content .= sprintf("<priority>%.1f</priority>\n",
                                     $this->_priorityDirectory($href));
